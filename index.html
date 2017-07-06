@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms and Widgets</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="calendar" class="Widgets">
+    <div class="header">
+   <span class="prev"></span>May 2014<span class="next"></span>
+    </div>
+    <table>
+        <tr class="gotham-medium">
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+        </tr>
+        <tr>
+            <th class="NotThisMonth">29</th> <th class="NotThisMonth">30</th> <th>1</th> <th>2</th> <th class="Today">3</th> <th>4</th> <th>5</th>
+        </tr>
+        <tr>
+            <th>6</th> <th class="Holiday">7</th> <th>8</th> <th>9</th> <th>10</th> <th>11</th> <th>12</th>
+        </tr>
+        <tr>
+            <th>13</th> <th>14</th> <th>15</th> <th>16</th> <th>17</th> <th>18</th> <th>19</th>
+        </tr>
+        <tr>
+            <th>20</th> <th>21</th> <th>22</th> <th class="Holiday">23</th> <th>24</th> <th>25</th> <th>26</th>
+        </tr>
+        <tr>
+            <th>27</th> <th>28</th> <th>29</th> <th>30</th> <th class="NotThisMonth">1</th> <th class="NotThisMonth">2</th> <th class="NotThisMonth">3</th>
+        </tr>
+    </table>
+    <input class="Button" type="button" value="Add Event">
+</div>
+<div id="booking" class="Widgets">
+    <div class="header">
+      <img src="css/img/Hotel_Relais.png">
+        <h2>Hotel Relais</h2>
+        <a>Paris, France</a>
+    </div>
+    <form action="">
+        <fieldset>
+            <dl class="checkInOut">
+                <dt><label for="CheckIn">Check in</label></dt>
+                <dd><input type="text" id="CheckIn" value="9 July, 2016"><div class="icon"></div></dd>
+                <dt><label for="CheckOut">Check out</label></dt>
+                <dd><input type="text" id="CheckOut" value="16 July, 2016"><div class="icon"></div></dd>
+
+            </dl>
+            <dl class="ForCheckBox"><input id="checkBox" type="checkbox" value="Flexible dates"><label>Flexible dates</label></dl>
+            <dl class="row">
+                <div>
+              <dt><label for="Adults">Adults</label></dt>
+              <dd><input type="text" id="Adults" value="2"><div class="icon"></div></dd>
+                </div>
+                <div>
+                <dt><label for="Children">Children</label></dt>
+                <dd><input type="text" id="Children" value="1"><div class="icon"></div></dd>
+                </div>
+            </dl>
+            <div>
+                <input class="Button" type="button" value="Search Rooms">
+            </div>
+        </fieldset>
+    </form>
+</div>
+<div id="destination" class="Widgets">
+<div class="panel">
+    <ul>
+        <li class="selected"></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+    <div class="info">
+        <div class="square"></div>
+        <h3>My most favourite place in the world</h3>
+        <p><span id="CounterReviews">154</span> Reviews</p>
+        <p id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a pulvinar ipsum. Aliquam sit amet iaculis dolor. Vivamus sed diam sollicitudin. </p>
+        <a>Read more</a>
+
+    </div>
+
+
+    <div class="img"><img src="css/img/destination.jpg">
+    </div>
+</div>
+<div id="email" class="Widgets" >
+    <form action="">
+        <fieldset>
+            <dl>
+                <dd><input type="text" class="usersemails" value="rick.james@mail.com"></dd>
+                <dd><input type="text" value="Subject"></dd>
+                <dd><textarea> Message</textarea></dd>
+            </dl>
+        </fieldset>
+        <div>
+            <input type="button" class="Button" value="Send">
+        </div>
+    </form>
+</div>
+<div id="bars" class="Widgets">
+    <div class="metrics">
+        <div>40</div>
+        <div>30</div>
+        <div>20</div>
+        <div>0</div>
+    </div>
+    <div class="Bars">
+        <div class="Bar">
+            <div class="sum">17 <div class="triangle"></div></div>
+            <div class="block"><div></div></div>
+            Mon</div>
+        <div class="Bar">
+            <div class="sum">19<div class="triangle"></div></div>
+            <div class="block"><div></div></div>
+            Tues</div>
+        <div class="Bar">
+            <div class="sum">27<div class="triangle"></div></div>
+            <div class="block"><div></div></div>
+            Wed</div>
+        <div class="Bar">
+            <div class="sum">32<div class="triangle"></div></div>
+            <div class="block"><div></div></div>
+            Thu</div>
+        <div class="Bar">
+            <div class="sum">28<div class="triangle"></div></div>
+            <div class="block"><div></div></div>
+            Fri</div>
+        <div class="Bar">
+            <div class="sum">34<div class="triangle"></div></div>
+            <div class="block"><div></div></div>
+            Sat</div>
+        <div class="Bar">
+            <div class="sum">30<div class="triangle"></div></div>
+            <div class="block"><div></div></div>
+            Sun</div>
+    </div>
+</div>
+</body>
+</html>
