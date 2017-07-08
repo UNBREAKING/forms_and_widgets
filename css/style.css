@@ -50,12 +50,23 @@ fieldset{
  * Calendar
  */
 
+.prev,.next{
+    width: 10px;
+    height:25px;
+    position:absolute;
+}
+
 .prev{
-    background: url(sprites/calendar_sprite.gif) 0 0;
+    margin-top: 18px;
+    margin-left: 37px;
+    background: url(sprites/calendar_sprite.gif) 0 0 no-repeat;
 }
 
 .next{
-    background: url(sprites/calendar_sprite.gif) -2px 0;}
+    background: url(sprites/calendar_sprite.gif) -10px 0px no-repeat;
+    margin-top: -42px;
+    margin-left: 300px;
+}
 
 #calendar{
     font-weight:100;
@@ -101,7 +112,6 @@ fieldset{
     border-radius: 25px;
 }
 
-
 .gotham-medium{
 
     font-family: Gotham-Medium;
@@ -117,6 +127,8 @@ fieldset{
 
 }
 
+
+
 #booking h2{
     font-family: Gotham-Book;
     font-size: 24px;
@@ -125,9 +137,19 @@ fieldset{
     margin-bottom: 0px;
     color:white;
 }
+
+#booking .header .icon{
+    width: 15px;
+    height: 25px;
+    background: url(sprites/calendar_sprite.gif) -20px 0px no-repeat;
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 27px;
+}
+
 #booking a{
     font-family: Gotham-Light;
-    margin-left: 25px;
+    margin-left: 45px;
     font-size: 13px;
     color:white;
 }
@@ -145,10 +167,8 @@ fieldset{
     height: 45px;
     margin-left: -30px;
     border-radius: 3px;
-    border: 1px solid lightgrey;
-    border-bottom: none;
-    border-right: none;
-    border-left:none ;
+    border: none;
+    border-top: 1px solid lightgrey;
     padding-left: 14px;
 }
 
@@ -192,28 +212,37 @@ fieldset{
 
 #booking form .icon{
     position: absolute;
-    width:37px;
-    height: 37px;
+    width:27px;
+    height: 29px;
     border-radius: 2px;
     background: rgb(65,75,89);
+    padding-top: 8px;
+    padding-left: 10px;
 }
 
+#booking form .icon .calendarimage
+{
+width: 20px;
+    height: 20px;
+    background: url(sprites/calendar_sprite.gif) -35px -1px no-repeat;
+}
 #booking .row .icon{
      margin-top: 5px;
      margin-left:-42px ;
  }
+#booking .row .icon .triangleimage
+{
+    margin-left: 2px;
+    width: 12px;
+    height: 20px;
+    background: url(sprites/calendar_sprite.gif) -55px -1px no-repeat;
+}
 
 #booking .checkInOut .icon{
     margin-top: -42px;
     margin-left:224px ;
 }
 
-#booking form input[type="checkbox"]{
-    width:22px;
-    height: 22px;
-    border: none;
-
-}
 
 #booking .ForCheckBox{
     margin-left: 5px;
@@ -222,10 +251,51 @@ fieldset{
 
 #booking .ForCheckBox label{
     position: absolute;
-    margin-top: 7px;
+    margin-top: -20px;
+    margin-left: 40px;
+}
+
+input[type="checkbox"]{
+    width: 22px;
+    height: 22px;
+    margin-top: -1px;
+    margin-left: -1px;
+    opacity: 0;
 }
 
 
+.ForCheckBox div{
+    margin-left: 5px;
+    width: 22px;
+    height: 22px;
+    border-radius: 3px;
+    border: none;
+    border-top: 1px solid lightgrey;
+    background:rgb(244,244,244);
+}
+
+.ForCheckBox div .CheckImg{
+    width: 22px;
+    height: 22px;
+    margin-top: -25px;
+    margin-left: 0px;
+    border: none;
+    background: none;
+}
+.CheckImg{
+    background: none;
+}
+input[type="checkbox"]:checked + .CheckImg{
+    background: url(sprites/calendar_sprite.gif) 0px -78px no-repeat;
+
+}
+button .iconsearch{
+    width: 25px;
+    height: 22px;
+    background: url(sprites/calendar_sprite.gif) -68px -1px no-repeat;
+    position: absolute;
+    margin-left: 40px;
+}
 /**
  * Destination
  */
@@ -238,31 +308,59 @@ fieldset{
 
 #destination div{
     display: inline-block;
-    margin: 0;
+
 }
 #destination .panel{
     width:70px;
     height: 340px;
-
+    position: absolute;
 }
 
 #destination .img{
-    margin-left: 355px;
+    margin-left: 430px;
 }
 
 
 .panel ul{
     margin-top: 5px;
-    padding: 0;
+    margin-left: -40px;
 }
 
 .panel li{
     display: inline-block;
     margin-top: -5px;
     width: 70px;
-    height: 113px;
+    height: 117px;
     border-top:1px solid black ;
     background: rgb(64,74,88);
+}
+
+.panel li div{
+
+    height:30px;
+
+}
+
+.panel .first-icon{
+    width: 27px;
+    background: url(sprites/calendar_sprite.gif) 0px -24px no-repeat;
+    margin-left: 20px;
+    margin-top: 45px;
+}
+
+.panel .second-icon{
+    width: 20px;
+    background: url(sprites/calendar_sprite.gif) -27px -24px no-repeat;
+    margin-left: 25px;
+    margin-top: 45px;
+}
+
+.panel .third-icon{
+    width: 25px;
+    height: 30px;
+    background: url(sprites/calendar_sprite.gif) -46px -24px no-repeat;
+    margin-left: 23px;
+    margin-top: 50px;
 }
 
 .panel li:first-child{
@@ -280,7 +378,7 @@ fieldset{
     background: rgb(255,255,255);
     position: absolute;
 padding-left: 30px;
-margin-left: -20px;
+margin-left: 75px;
 }
 
 .info h3{
@@ -333,7 +431,45 @@ margin-left: -20px;
 
 }
 
+.img .text{
+    position: absolute;
+    margin-top: -30px;
+}
+.img .iconComments{
+    width: 32px;
+    height: 30px;
+    background: url(sprites/calendar_sprite.gif) -68px -24px no-repeat;
 
+}
+
+.img .iconLikes{
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 10px;
+    width: 28px;
+    height: 26px;
+    background: url(sprites/calendar_sprite.gif) 0px -56px no-repeat;
+
+}
+
+.img .text{
+    position: relative;
+    height: 30px;
+    float: right;
+    margin-right:70px ;
+    margin-top: -50px;
+}
+#NumberofComments,#NumberOfLikes{
+    position: relative;
+    display: inline-block;
+    top: -15px;
+    font-family: Gotham-Book;
+    color: white;
+}
+
+#NumberOfLikes{
+    left:45px;
+}
 /**
  * Email
  */
@@ -392,6 +528,34 @@ margin-left: -20px;
 }
 
 
+
+
+#email .iconEmail,.iconSubject{
+    height: 20px;
+    position: absolute;
+
+}
+
+#email .iconEmail{
+    margin-top: -30px;
+    width: 17px;
+    margin-left: 300px;
+    background:  url(sprites/calendar_sprite.gif) -29px -60px no-repeat;
+}
+
+#email .iconSubject{
+    width: 20px;
+    margin-top: -32px;
+    margin-left: 296px;
+    background:  url(sprites/calendar_sprite.gif) -48px -58px no-repeat;
+}
+
+.Usersemails:after{
+    content: "<div class='wtf'></div";
+}
+.wtf{width: 20px;
+height: 20px;
+background-color:black; }
 /**
  * Bars
  */
@@ -509,13 +673,12 @@ margin-left: -20px;
 
 
 @keyframes grow {
-    from{height: 0;
-    top:100%;
+    from {
+        height: 0;
+        top: 100%;
     }
-
-
 }
-
 .Bars .Bar .block div{
     animation: grow 3s ;
+
 }

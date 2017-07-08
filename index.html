@@ -8,7 +8,7 @@
 <body>
 <div id="calendar" class="Widgets">
     <div class="header">
-   <span class="prev"></span>May 2014<span class="next"></span>
+   <div class="prev"></div>May 2014<div class="next"></div>
     </div>
     <table>
         <tr class="gotham-medium">
@@ -43,29 +43,33 @@
       <img src="css/img/Hotel_Relais.png">
         <h2>Hotel Relais</h2>
         <a>Paris, France</a>
+        <div class="icon"></div>
     </div>
     <form action="">
         <fieldset>
             <dl class="checkInOut">
                 <dt><label for="CheckIn">Check in</label></dt>
-                <dd><input type="text" id="CheckIn" value="9 July, 2016"><div class="icon"></div></dd>
+                <dd><input type="text" id="CheckIn" value="9 July, 2016"><div class="icon"><div class="calendarimage"></div></div></dd>
                 <dt><label for="CheckOut">Check out</label></dt>
-                <dd><input type="text" id="CheckOut" value="16 July, 2016"><div class="icon"></div></dd>
+                <dd><input type="text" id="CheckOut" value="16 July, 2016"><div class="icon"><div class="calendarimage"></div></div></dd>
 
             </dl>
-            <dl class="ForCheckBox"><input id="checkBox" type="checkbox" value="Flexible dates"><label>Flexible dates</label></dl>
+            <dl class="ForCheckBox">
+                <div><input id="checkBox" type="checkbox" value="Flexible dates">
+                 <div class="CheckImg"></div></div>
+                <label>Flexible dates</label></dl>
             <dl class="row">
                 <div>
               <dt><label for="Adults">Adults</label></dt>
-              <dd><input type="text" id="Adults" value="2"><div class="icon"></div></dd>
+              <dd><input type="text" id="Adults" value="2"><div class="icon"><div class="triangleimage"></div></div></dd>
                 </div>
                 <div>
                 <dt><label for="Children">Children</label></dt>
-                <dd><input type="text" id="Children" value="1"><div class="icon"></div></dd>
+                <dd><input type="text" id="Children" value="1"><div class="icon"><div class="triangleimage"></div></div></dd>
                 </div>
             </dl>
             <div>
-                <input class="Button" type="button" value="Search Rooms">
+                <button class="Button"> <div class="iconsearch"></div>Search Rooms</button>
             </div>
         </fieldset>
     </form>
@@ -73,9 +77,9 @@
 <div id="destination" class="Widgets">
 <div class="panel">
     <ul>
-        <li class="selected"></li>
-        <li></li>
-        <li></li>
+        <li class="selected"><div class="first-icon"></div></li>
+        <li><div class="second-icon"></div></li>
+        <li><div class="third-icon"></div></li>
     </ul>
 </div>
     <div class="info">
@@ -86,18 +90,23 @@
         <a>Read more</a>
 
     </div>
-
-
     <div class="img"><img src="css/img/destination.jpg">
+        <div class="text">
+            <div class="iconComments"></div>
+            <a id="NumberofComments">723</a>
+            <div class="iconLikes"></div>
+            <a id="NumberOfLikes">2709</a>
+        </div>
     </div>
 </div>
 <div id="email" class="Widgets" >
     <form action="">
         <fieldset>
             <dl>
-                <dd><input type="text" class="usersemails" value="rick.james@mail.com"></dd>
-                <dd><input type="text" value="Subject"></dd>
-                <dd><textarea> Message</textarea></dd>
+                <dd><input type="text" class="Usersemails" value="rick.james@mail.com"><div class="iconEmail"></div></dd>
+                <dd><input type="text" value="Subject"><div class="iconSubject"></div></dd>
+                <dd><textarea>Message
+                </textarea></dd>
             </dl>
         </fieldset>
         <div>
